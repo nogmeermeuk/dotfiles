@@ -38,8 +38,8 @@ alias cat='cat -v'
 # List files and directories with:
 # -la          : Permissions, ownership, size and modification date
 # -h           : Sizes in human readable units
-# --color=auto : Colors!
-alias ls='ls -lah --color=auto'
+# -G           : Colors!
+alias ls='ls -lahG'
 
 # j k l ;
 alias vi='vim'
