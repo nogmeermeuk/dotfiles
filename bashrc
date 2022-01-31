@@ -20,7 +20,7 @@ export LC_NUMERIC='nl_NL.UTF-8'
 export LC_TIME='nl_NL.UTF-8'
 
 # Prepend ~/.bin to PATH
-export PATH="$HOME/.bin:$PATH"
+export PATH="$HOME/bin:$PATH"
 
 # Set the prompt, it will look like this:
 # ---> <user>@<host> :: <current directory>
