@@ -1,0 +1,31 @@
+" =BEHAVIOR
+"
+" Every guide or tutorial gives the advices to use Vim in noncompatible mode
+set nocompatible
+
+" Enable backspace so regular humans can use it
+set backspace=indent,eol,start
+
+" Turn TABs into spaces
+set expandtab
+
+" Set number of visual spaces per TAB
+set tabstop=2
+
+" Set number of spaces when you TAB in insert mode
+set softtabstop=2
+
+" >> indents by two spaces
+set shiftwidth=2 
+
+" =UI
+"
+" Enable line numbers
+set number
+
+" Show current mode in command-line
+set showmode
+
+" Enable syntax highlighting
+syntax on
+
