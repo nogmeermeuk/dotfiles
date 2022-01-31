@@ -20,11 +20,14 @@ set shiftwidth=2
 
 " =UI
 "
+" Show current mode in command-line
+set showmode
+
 " Enable line numbers
 set number
 
-" Show current mode in command-line
-set showmode
+" Highlight matching brackets
+set showmatch
 
 " Enable syntax highlighting
 syntax on
