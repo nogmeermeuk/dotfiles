@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # =EXPORTS
 #
 # Set .bash_history to ignore commands that start with a space and
@@ -20,7 +22,7 @@ export LC_NUMERIC='nl_NL.UTF-8'
 export LC_TIME='nl_NL.UTF-8'
 
 # Prepend ~/.bin to PATH
-export PATH="$HOME/bin:$PATH"
+export PATH="${HOME}/bin:$PATH"
 
 # Set the prompt, it will look like this:
 # ---> <user>@<host> :: <current directory>
@@ -42,7 +44,11 @@ alias cat='cat -v'
 alias ls='ls -lahG'
 
 # j k l ;
-alias vi='vim'
+if [[ -x $(command -v vim) ]]; then
+  alias vi='vim'
+else
+  alias vi='nano'
+fi
 
 # =MISC SHIZZLE
 #
@@ -51,6 +57,4 @@ umask 027
 
 # =TO DO
 #
-# 1. Check if vim is installed before assigning the alias
-# 2. Set editor to vim; else nano
-# 3. Check is ls --color=auto is possible (not every OS has this flag)
+# 1. Check is ls --color=auto is possible (not every OS has this flag)
