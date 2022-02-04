@@ -2,12 +2,19 @@
 
 # =EXPORTS
 #
+# Set default editor
+if [[ -x $(command -v vim) ]]; then
+  export EDITOR='vim'
+else
+  export EDITOR='nano'
+fi
+
 # Set .bash_history to ignore commands that start with a space and
 # ignore duplicate commands
-export HISTCONTROL=ignoreboth
+export HISTCONTROL='ignoreboth'
 
 # Set .bash_history to remember 10k commands
-export HISTSIZE=10000
+export HISTSIZE='10000'
 
 # Set .bash_history to record issues command with day and time
 export HISTTIMEFORMAT='%F %T '
