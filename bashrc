@@ -28,7 +28,7 @@ export LC_NUMERIC='nl_NL.UTF-8'
 # Set the format for date & time
 export LC_TIME='nl_NL.UTF-8'
 
-# Prepend ~/.bin to PATH
+# Prepend ~/bin to PATH
 export PATH="${HOME}/bin:$PATH"
 
 # Set the prompt, it will look like this:
@@ -47,8 +47,8 @@ alias cat='cat -v'
 # List files and directories with:
 # -la          : Permissions, ownership, size and modification date
 # -h           : Sizes in human readable units
-# -G           : Colors!
-alias ls='ls -lahG'
+# --color=auto : Colors!
+alias ls='ls -lah --color=auto'
 
 # j k l ;
 if [[ -x $(command -v vim) ]]; then
@@ -62,6 +62,8 @@ fi
 # Moar restrictions
 umask 027
 
-# =TO DO
-#
-# 1. Check is ls --color=auto is possible (not every OS has this flag)
+# Use bash completion if possible
+if [[ -f /usr/share/bash-completion/bash_completion ]]; then
+  . /usr/share/bash-completion/bash_completion
+fi
+
